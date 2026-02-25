@@ -1,7 +1,15 @@
+import Estoque from "./Estoque";
+
 function Produto(props) {
 
+    produto = props.produto;
+
     return (
-        <h4>Produto encontra-se:</h4>
+        <div>
+            <h4>Produto encontra-se:</h4>
+            <Estoque/>
+        </div>
+
     )
 }
 

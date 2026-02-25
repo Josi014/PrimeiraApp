@@ -1,33 +1,34 @@
-//import Titulo from "./Titulo";
+import Titulo from "./Titulo";
+import { useState } from 'react';
 import './App.css';
-import Produto from './Produto';
-//import Corpo from "./Corpo";
+import Corpo from "./Corpo";
 
-function App(){
-    
+function App() {
+
+    const [contador, setContador] = useState(0);
+
     const mensagemAlerta = (mensagem) => {
         alert(mensagem);
     }
 
-    return(
+    return (
         <div>
-            <h1>Folha IFSUL!</h1>
-            <Titulo texto="APP"/>
-            <Corpo  mensagemAlerta={mensagemAlerta} array={["arroz", "feijão", "macarrão"]}/>
+            <h1>Aula 25/02/2026!</h1>
+
+            <h2>Contador {contador}</h2>
+            <button onClick={() => setContador(contador + 1)}>Incrementar contador</button>
+            <button onClick={() => setContador(contador - 1)}>Decrementar contador</button>
+
+            <Titulo texto="APP" />
+            <Corpo mensagemAlerta={mensagemAlerta} array={["arroz", "feijão", "macarrão"]} />
+
+            <div>
+                <h1>Consulte Produtos!</h1>
+            </div>
         </div>
     )
 
-   /** return(
-        <div>
-            <h1>Consulte Produtos!</h1>
-            <label>Teste: </label>
-            <input type='text' id='produto' placeholder='Digite um produto'></input>
-            <button type='submet'>Verificar</button>
 
-            < Produto produto = "carderno" />
-        </div>
-    )*/
-    
 }
 
 export default App;

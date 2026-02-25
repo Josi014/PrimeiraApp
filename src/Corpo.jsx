@@ -1,3 +1,5 @@
+import Titulo from "./Titulo";
+
 function Corpo(props) {
     return (
         <div>
@@ -11,7 +13,6 @@ function Corpo(props) {
             })}
 
             <h4>Valores recebidos por props: {JSON.stringify(props)}</h4>
-
 
         </div>
     )
