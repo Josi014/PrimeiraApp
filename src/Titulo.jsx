@@ -1,8 +1,13 @@
 function Titulo(props){
     return(
         <div>
-            <h2>Testando!</h2>
-            <p>Usando a prop recebida: {props.texto}</p>
+            <h2>Titulo!</h2>
+
+            <div class="usado">
+                <h3>Usando a prop recebida:</h3>
+                <p>{props.texto}</p>
+            </div>
+
         </div>
     )
 }
